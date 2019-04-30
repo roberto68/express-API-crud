@@ -1,0 +1,11 @@
+{
+  "name": "devslopes-api-course",
+  "version": "0.0.1",
+  "description": "Devslopes RESTful API Course API Project",
+  "main": "dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Davis <jack@devslopes.com>",
+  "license": "ISC"
+}

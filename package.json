@@ -1,0 +1,73 @@
+{
+  "name": "devslopes-api-course",
+  "version": "0.0.1",
+  "description": "Devslopes RESTful API Course API Project",
+  "main": "dist",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets env,stage-0\" && inspect",
+    "build": "babel src -s -D -d dist --presets env,stage-0",
+    "start": "NODE_ENV=production pm2 start dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-unused-vars": 1
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/jackd942/api-course.git"
+  },
+  "author": "Jack Davis <jack@devslopes.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^3.3.3",
+    "cookie-parser": "^1.4.3",
+    "cookieparser": "^0.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.15.6",
+    "flash": "^1.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.0",
+    "passport-oauth": "^1.0.0",
+    "path": "^0.12.7",
+    "session-file-store": "^1.2.0"
+  },
+  "keywords": [
+    "express",
+    "es6",
+    "rest",
+    "api"
+  ]
+}
